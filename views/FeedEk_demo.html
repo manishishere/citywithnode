@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <title>FeedEk jQuery RSS/ATOM Feed Plugin Demo | jQuery RSS/ATOM Parser Plugin FeedEk Demo</title>
+    <link href="../bootsrap/css/FeedEk.css" rel="stylesheet" type="text/css" />
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../bootstrap/css/news.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-langs.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/FeedEk.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#divRss').FeedEk({
+                FeedUrl: 'http://www.aweber.com/blog/feed',
+                MaxCount: 1
+            });
+               $('#divRss2').FeedEk({
+                FeedUrl: 'http://rss.cnn.com/rss/edition_americas.rss',
+                MaxCount: 1
+            });
+                  $('#divRss3').FeedEk({
+                FeedUrl: 'http://rss.cnn.com/rss/edition_technology.rss',
+                MaxCount: 1
+            });
+                     $('#divRss4').FeedEk({
+                FeedUrl: 'http://rss.cnn.com/rss/edition_football.rss',
+                MaxCount: 1
+            });
+            $('#divRsst').FeedEk({
+                FeedUrl: 'http://jquery-plugins.net/rss',
+               MaxCount: 4,
+               ShowDesc: false,
+                MaxCount: 1,
+                 ShowPubDate: false,
+                ShowTitle:true,
+
+            });
+            $('#divRssd').FeedEk({
+               DateFormat: 'L',
+                FeedUrl: 'http://www.aweber.com/blog/feed/',
+               ShowDesc: false,
+                MaxCount: 1,               
+                DateFormatLang:'en',
+                 ShowPubDate: false,
+
+            });
+                  $('#divRssd2').FeedEk({
+               DateFormat: 'L',
+                FeedUrl: 'http://rss.cnn.com/rss/edition_americas.rss',
+                     ShowDesc: false,
+              TitleLinkTarget:'_black',
+                MaxCount: 1,               
+                DateFormatLang:'en',
+                 ShowPubDate: false,
+
+            });
+                        $('#divRssd3').FeedEk({
+               DateFormat: 'L',
+                FeedUrl: 'http://rss.cnn.com/rss/edition_technology.rss',
+                  ShowDesc: false,
+              TitleLinkTarget:'_black',
+                MaxCount: 1,               
+                DateFormatLang:'en',
+                 ShowPubDate: false,
+
+            });
+                              $('#divRssd4').FeedEk({
+               DateFormat: 'L',
+                FeedUrl: 'http://rss.cnn.com/rss/edition_football.rss',
+               MaxCount: 4,
+               ShowDesc: false,
+              TitleLinkTarget:'_black',
+                MaxCount: 1,               
+                DateFormatLang:'en',
+                 ShowPubDate: false,
+
+            });
+
+       
+        });
+
+    </script>
+    <style>
+        body{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;background-color: white;font-size: 13px;line-height: 17px !important;}
+        .rssDiv{float: left;padding-right: 35px;}
+        ol{width: 300px !important;}
+    </style>
+</head>
+<body>  
+
+
+   <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand top" href="#">Exchange platform</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+             <a href="/">Exchange</a> 
+ <!--         <form  action="/"  method="get"><input class="b3" type="submit" value="Exchange"/></form> -->
+          </li>
+          <li>
+            <a href="#">News</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  
+  <table class="table">
+    <tr style="background-color:grey">
+      <th style="width:150px">Date</th>
+      <th>Title</th>
+
+     <tr>      
+      <td>2013/05/06</td>
+      <td><button class="b1" data-target=".bs-example-modal-lg" data-toggle=
+      "modal" type="button"><div style="pointer-events: none;
+   cursor: default; color:black;  text-decoration: none;" id="divRssd"></div></button></td>
+    </tr>
+     <td>2013/05/06</td>
+      <td><button class="b1" data-target=".bs-example-modal-lg2" data-toggle=
+      "modal" type="button"><div style="pointer-events: none;
+   cursor: default; color:black;  text-decoration: none;" id="divRssd2"></div></button></td>
+     <tr>      
+      <td>2013/05/06</td>
+      <td><button class="b1" data-target=".bs-example-modal-lg3" data-toggle=
+      "modal" type="button"><div style="pointer-events: none;
+   cursor: default; color:black;  text-decoration: none;" id="divRssd3"></div></button></td>
+    </tr>
+     <tr>      
+      <td>2013/05/06</td>
+      <td>
+      <button class="b1" data-target=".bs-example-modal-lg4" data-toggle=
+      "modal" type="button"> <div style="pointer-events: none;
+   cursor: default; color:black;  text-decoration: none;" id="divRssd4"></div> </button></td>
+    </tr>
+
+  </table><!-- Large modal -->
+   <div aria-labelledby="myLargeModalLabel" class=
+  "modal fade bs-example-modal-lg" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div id="divRss"></div>
+    <!--     <button class="btn btn-default" type="button">close</button> -->
+      </div>
+    </div>
+  </div>
+  <div aria-labelledby="myLargeModalLabel" class=
+  "modal fade bs-example-modal-lg2" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg2">
+      <div class="modal-content">
+        <div id="divRss2"></div>
+    <!--     <button class="btn btn-desfault" type="button">close</button> -->
+      </div>
+    </div>
+  </div>
+  <div aria-labelledby="myLargeModalLabel" class=
+  "modal fade bs-example-modal-lg3" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg2">
+      <div class="modal-content">
+        <div id="divRss3"></div>
+    <!--     <button class="btn btn-desfault" type="button">close</button> -->
+      </div>
+    </div>
+  </div>
+
+  <div aria-labelledby="myLargeModalLabel" class=
+  "modal fade bs-example-modal-lg4" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg2">
+      <div class="modal-content">
+        <div id="divRss4"></div>
+    <!--     <button class="btn btn-desfault" type="button">close</button> -->
+      </div>
+    </div>
+  </div>
+
+
+  <div style="padding:10px;">
+    <h1></h1>
+    <div>
+        <div class="rssDiv">
+            <p>
+                <strong></strong>
+            <p />
+            <div id=" "></div>
+         
+          
+        </div>
+
+        
+
+  <script src="../bootstrap/js/bootstrap.js">
+  </script>
+</body>
+
+</html>

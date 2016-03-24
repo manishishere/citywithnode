@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Currency Exchange Website</title>
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../bootstrap/css/exchange.css" rel="stylesheet">
+</head>
+<body class="body" ng-app="myApp" ng-controller="myCtrl">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand top" href="#">Exchange platform</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">Exchange</a>
+          </li>
+          <li>
+           <form  action="users"  method="get"><input class="b3" type="submit" value="News"/></form>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav><!-- ================nav-bar end==============================
+        ==================page 1 starts=========================== -->
+  <div class="p1">
+    <h4>Currency Exchange
+      <label style="float:right;margin-right:50px;">amount :<input type="text" ng-model="amt"></input></label>
+    </h4>
+    
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>USD/JSP</h4>
+             <!--  <div style="display:none;">{{ Currencies="USD/JSP" }} </div> -->
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+                  <div >
+                      <div class="no">{{ name }}</div>
+
+                      </div>
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button" ng-click="mybid()" >Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                   <div class="no">{{ ask }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button" ng-click="myask()" >Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>AUD/JSP</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+                   <div >
+                      <div class="no">{{ name1 }}</div>
+                      </div>
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button" ng-click="mybid1()">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                <div class="no">{{ ask1 }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button" ng-click="myask1()">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>EUR/CAD</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+
+                     <div class="no">{{ name2 }}</div>
+                      
+                  
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button" ng-click="mybid2()">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                   <div class="no">{{ ask2 }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button"  ng-click="myask2()">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>USD/CNY</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ name3 }}</div>
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button" ng-click="mybid3()">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ ask3 }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button" ng-click="myask3()">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>CAD/CNY</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ name4 }}</div>
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button" ng-click="mybid4()">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ ask4 }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button" ng-click="myask4()">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail r1">
+          <div class="caption">
+            <div class="head1">
+              <h4>GBP/USD</h4>
+            </div>
+            <p></p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ name5 }}</div>
+                </div><a class="btn btn-primary b1" href="#" role=
+                "button" ng-click="mybid5()">Bid</a>
+              </div>
+              <div class="col-md-6">
+                <div class="sq">
+                  <div class="no">{{ ask5 }}</div>
+                </div><a class="btn btn-default b2" href="#" role=
+                "button" ng-click="myask5()">Ask</a>
+              </div>
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <!--   <div class="panel-heading"></div> -->
+    <!-- Table -->
+    <h5 style="margin-left:100px; ">Trasnsaction History</h5>
+    <center>
+      <table class="table">
+        <tr class="thead">
+          <th>Order</th>
+          <th>Currencies</th>
+          <th>Amount</th>
+          <th>Price</th>
+          <th>Date Time</th>
+        </tr>
+        <tr ng-repeat="rowContent in rows.slice().reverse()">
+          <td style="background-color:{{ rowContent.color }};color:white;"> {{ rowContent.order }}</td>
+          <td style="background-color:{{ rowContent.color }};color:white;">{{ rowContent.Currencies }}</td>
+          <td style="background-color:{{ rowContent.color }};color:white;">{{ rowContent.amout }}</td>
+          <td style="background-color:{{ rowContent.color }};color:white;">{{ rowContent.price }}</td>
+          <td style="background-color:{{ rowContent.color }};color:white;">{{ rowContent.dt | date:'yyyy/MM/dd' }} &nbsp; {{rowContent.dt | date:'hh:mm:ss'}}</td>
+        <!--   <td> {{ rowContent }} </td>  -->
+        </tr>
+      </table>
+    </center>
+  </div><!---  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script> 
+  <script src="js/bootstrap.js"> 
+  </script> -->
+  <script src="../bootstrap/js/angular.js"></script>
+  <script type="text/javascript">        
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  var t="0.2342";   
+  $scope.cnt=0;
+  $scope.rows = [];
+  $scope.name = (Math.random()*10).toFixed(4);
+  $scope.ask =parseInt($scope.name) + 0.8430;
+  $scope.name1 = (Math.random()*10).toFixed(4);
+  $scope.ask1 =(parseFloat($scope.name1) + 0.8798).toFixed(4);
+  $scope.name2 = (Math.random()*10).toFixed(4);
+  $scope.ask2 =(parseFloat($scope.name2) + 0.8798).toFixed(4);
+  $scope.name3 = (Math.random()*10).toFixed(4);
+  $scope.ask3 =(parseFloat($scope.name3) + 0.8798).toFixed(4);
+  $scope.name4 = (Math.random()*10).toFixed(4);
+  $scope.ask4=(parseFloat($scope.name4) + 0.8798).toFixed(4);
+  $scope.name5 = (Math.random()*10).toFixed(4);
+  $scope.ask5 =(parseFloat($scope.name5) + 0.8798).toFixed(4);
+  $interval(function () {
+      $scope.name = (Math.random()*10).toFixed(4);
+       $scope.mybid = function() {
+        // ----------------name function 0---------------------
+           $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name)*1000)).toFixed(1));
+           $scope.order="BUY";
+           $scope.color="green";
+           $scope.Currencies="USD/JSP";
+           $scope.currentvalue=(parseFloat($scope.name));
+           $scope.dt=new Date();
+          // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+    }
+
+
+      $scope.ask =(parseFloat($scope.name) + 0.8798).toFixed(4);
+       $scope.myask = function() {
+       // alert($scope.amt);
+        if(($scope.amt-(parseFloat($scope.ask)*1000)<=0))
+          {
+            alert("value less than zero");
+            console.log("asdf");
+          }
+        else if($scope.amt>=0){
+         $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask)*1000)).toFixed(1));
+        $scope.order="SELL";
+        $scope.color="red";
+        $scope.Currencies="USD/JSP";
+        $scope.currentvalue=(parseFloat($scope.ask));
+         $scope.dt=new Date();
+                   // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+       }
+    }
+            // ----------------name function 1---------------------
+      $scope.name1 = (Math.random()*10).toFixed(4);
+             $scope.mybid1 = function() {
+              $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name1)*1000)).toFixed(1));
+           $scope.order="BUY";
+           $scope.color="green";
+           $scope.Currencies="AUD/JSP";
+           $scope.currentvalue=(parseFloat($scope.name1));
+           $scope.dt=new Date();
+            // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+    }
+      $scope.ask1 =(parseFloat($scope.name1) + 0.8798).toFixed(4);
+       $scope.myask1 = function() {
+       // alert($scope.amt);
+        if(($scope.amt-(parseFloat($scope.ask1)*1000)<=0))
+          {
+            alert("value less than zero");
+            console.log("asdf");
+          }
+        else if($scope.amt>=0){
+        $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask1)*1000)).toFixed(1));
+        $scope.order="SELL";
+        $scope.color="red";
+        $scope.Currencies="USD/JSP";
+        $scope.currentvalue=(parseFloat($scope.ask1));
+         $scope.dt=new Date();
+                   // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+       }
+    }
+            // ----------------name function 2---------------------
+      $scope.name2 = (Math.random()*10).toFixed(4);
+             $scope.mybid2 = function() {
+        $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name2)*1000)).toFixed(1));
+           $scope.order="BUY";
+           $scope.color="green";
+           $scope.Currencies="EUR/CAD";
+           $scope.currentvalue=(parseFloat($scope.name2));
+           $scope.dt=new Date();
+            // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+    }
+      $scope.ask2 =(parseFloat($scope.name2) + 0.8798).toFixed(4);
+             $scope.myask2 = function() {
+       // alert($scope.amt);
+        if(($scope.amt-(parseFloat($scope.ask2)*1000)<=0))
+          {
+            alert("value less than zero");
+            console.log("asdf");
+          }
+        else if($scope.amt>=0){
+         $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask2)*1000)).toFixed(1));
+        $scope.order="SELL";
+        $scope.color="red";
+        $scope.Currencies="EUR/CAD";
+        $scope.currentvalue=(parseFloat($scope.ask2));
+         $scope.dt=new Date();
+                   // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+       }
+    }
+            // ----------------name function 3---------------------
+      $scope.name3 = (Math.random()*10).toFixed(4);
+
+             $scope.mybid3 = function() {
+      //  $scope.amt=$scope.amt+(parseFloat($scope.name3)*1000);
+        $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name3)*1000)).toFixed(1));
+           $scope.order="BUY";
+           $scope.color="green";
+           $scope.Currencies="USD/CNY";
+           $scope.currentvalue=(parseFloat($scope.name3));
+           $scope.dt=new Date();
+            // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+    }
+      $scope.ask3 =(parseFloat($scope.name3) + 0.8798).toFixed(4);
+       $scope.myask3 = function() {
+       // alert($scope.amt);
+        if(($scope.amt-(parseFloat($scope.ask3)*1000)<=0))
+          {
+            alert("value less than zero");
+            console.log("asdf");
+          }
+        else if($scope.amt>=0){
+         $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask3)*1000)).toFixed(1));
+        $scope.order="SELL";
+        $scope.color="red";
+        $scope.Currencies="USD/CNY";
+        $scope.currentvalue=(parseFloat($scope.ask3));
+         $scope.dt=new Date();
+                   // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+       }
+    }
+            // ----------------name function 4---------------------
+      $scope.name4 = (Math.random()*10).toFixed(4);
+             $scope.mybid4 = function() {
+        //$scope.amt=$scope.amt+(parseFloat($scope.name4)*1000);
+        $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name4)*1000)).toFixed(1));
+           $scope.order="BUY";
+           $scope.color="green";
+           $scope.Currencies="CAD/CNY";
+           $scope.currentvalue=(parseFloat($scope.name4));
+           $scope.dt=new Date();
+            // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+    }
+      $scope.ask4=(parseFloat($scope.name4) + 0.8798).toFixed(4);
+       $scope.myask4 = function() {
+       // alert($scope.amt);
+        if(($scope.amt-(parseFloat($scope.ask4)*1000)<=0))
+          {
+            alert("value less than zero");
+            console.log("asdf");
+          }
+        else if($scope.amt>=0){
+         $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask4)*1000)).toFixed(1));
+        $scope.order="SELL";
+        $scope.color="red";
+        $scope.Currencies="CAD/CNY";
+        $scope.currentvalue=(parseFloat($scope.ask4));
+         $scope.dt=new Date();
+                   // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+       }
+    }
+            // ----------------name function 5---------------------
+      $scope.name5 = (Math.random()*10).toFixed(4);
+             $scope.mybid5 = function() {
+       // $scope.amt=$scope.amt+(parseFloat($scope.name5)*1000);
+       $scope.amt=parseFloat(($scope.amt+(parseFloat($scope.name5)*1000)).toFixed(1));
+           $scope.order="BUY";
+           $scope.color="green";
+           $scope.Currencies="GBP/USD";
+           $scope.currentvalue=(parseFloat($scope.name5));
+           $scope.dt=new Date();
+            // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+    }
+      $scope.ask5 =(parseFloat($scope.name5) + 0.8798).toFixed(4);
+       $scope.myask5 = function() {
+       // alert($scope.amt);
+        if(($scope.amt-(parseFloat($scope.ask5)*1000)<=0))
+          {
+            alert("value less than zero");
+            console.log("asdf");
+          }
+        else if($scope.amt>=0){
+        $scope.amt=parseFloat(($scope.amt-(parseFloat($scope.ask5)*1000)).toFixed(1));
+        $scope.order="SELL";
+        $scope.color="red";
+        $scope.Currencies="GBP/USD";
+        $scope.currentvalue=(parseFloat($scope.ask5));
+         $scope.dt=new Date();
+                   // --------code for dynamic row addition in table------
+            tempobj = {
+            order : $scope.order,
+            Currencies : $scope.Currencies,
+            amout:$scope.amt,
+            price:$scope.currentvalue,
+            dt:$scope.dt,
+            color:$scope.color
+
+          };
+          $scope.rows.push(tempobj);
+          $scope.cnt++;
+          //-------------aboue code for dynamic code addiion in-->
+       }
+    }
+
+
+  }, 500);
+//    timerrrrrrrrrrrrrrrrrrrrrrrrrr
+//
+//
+//
+
+  $scope.amt=20000;
+  
+   
+
+});
+
+</script>
+</script>
+  </script>
+</body>
+</html>

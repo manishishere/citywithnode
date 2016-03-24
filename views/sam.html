@@ -1,0 +1,35 @@
+
+<html>
+<body>
+	<h1>asdfsdf</h1>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="FeedEk.js"></script>
+<script src="moment.min.js"></script> 
+<!-- OR --> 
+<script src="moment-with-langs.min.js"></script>
+
+<div id="divRss">aaa</div>
+<script>
+
+
+$('#divRss').FeedEk({
+FeedUrl:'http://jquery-plugins.net/rss',
+MaxCount : 5,
+ShowDesc : true,
+ShowPubDate:true,
+DescCharacterLimit:100,
+TitleLinkTarget:'_blank',
+DateFormat: 'MM/DD/YYYY',
+DateFormatLang:'en'
+});
+</script>
+<style>
+.feedEkList{width:450px; list-style:none outside none;background-color:#FFFFFF; border:1px solid #D3CAD7; padding:4px 6px; color:#3E3E3E;}
+.feedEkList li{border-bottom:1px solid #D3CAD7; padding:5px;}
+.feedEkList li:last-child{border-bottom:none;}
+.itemTitle a{font-weight:bold; color:#4EBAFF !important; text-decoration:none }
+.itemTitle a:hover{ text-decoration:underline }
+.itemDate{font-size:11px;color:#AAAAAA;}
+</style>
+</body>
+</html>

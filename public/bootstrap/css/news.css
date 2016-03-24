@@ -1,0 +1,17 @@
+.body{
+	width: 100%;
+	background-color: white;
+}
+.table{
+	width: 1000px;
+	margin-left: 100px;
+}
+.b1
+{
+	border: none;
+	background-color: white;
+	text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
